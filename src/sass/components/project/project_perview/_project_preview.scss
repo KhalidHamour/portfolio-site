@@ -1,0 +1,9 @@
+@use "./project_img";
+@use "./project_links";
+
+.project_preview,
+.project-flipped_preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

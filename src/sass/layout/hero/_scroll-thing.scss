@@ -1,0 +1,17 @@
+@use "../../helpers/mixins" as *;
+
+.hero_scroll-thing {
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+
+  @include md {
+    height: 60px;
+  }
+  @include lg {
+    height: 70px;
+  }
+  @include xl {
+    height: 80px;
+  }
+}

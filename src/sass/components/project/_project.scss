@@ -1,0 +1,26 @@
+@use "./project_details/project_details";
+@use "./project_perview/project_preview";
+
+@use "../../helpers/mixins" as *;
+
+.project {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+
+  @include lg {
+    flex-direction: row;
+  }
+}
+
+.project-flipped {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+
+  @include lg {
+    flex-direction: row-reverse;
+  }
+}

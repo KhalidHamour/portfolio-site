@@ -1,0 +1,23 @@
+@use "../../../helpers/variables" as *;
+@use "../../../helpers/mixins" as *;
+
+@use "./title";
+@use "./description";
+@use "./status";
+@use "./builtwith-label";
+@use "./project_builtwith-list";
+
+.project,
+.project-flipped {
+  &_details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+
+    @include lg {
+      width: 50%;
+    }
+  }
+}

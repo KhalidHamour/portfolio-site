@@ -1,0 +1,22 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.about,
+.contact,
+.projects {
+  &_heading {
+    font-weight: bold;
+    font-size: $heading-font-size-sm;
+    margin-bottom: 3rem;
+
+    @include md {
+      font-size: $heading-font-size-md;
+    }
+    @include lg {
+      font-size: $heading-font-size-lg;
+    }
+    @include xl {
+      font-size: $heading-font-size-xl;
+    }
+  }
+}

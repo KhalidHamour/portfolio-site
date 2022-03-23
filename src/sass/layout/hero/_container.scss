@@ -1,0 +1,26 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.hero {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+
+    @include md {
+      top: 10vh;
+    }
+
+    @include lg {
+      top: 15vh;
+      flex-direction: row;
+    }
+
+    @include xl {
+      top: 20vh;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "../../../helpers/variables" as *;
+@use "../../../helpers/mixins" as *;
+.project_img,
+.project-flipped_img {
+  height: $project-img-height-sm;
+  width: $project-img-width-sm;
+
+  @include md {
+    height: $project-img-height-md;
+    width: $project-img-width-md;
+  }
+
+  @include lg {
+    height: $project-img-height-lg;
+    width: $project-img-width-lg;
+  }
+
+  @include xl {
+    height: $project-img-height-xl;
+    width: $project-img-width-xl;
+  }
+}

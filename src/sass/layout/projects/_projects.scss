@@ -1,0 +1,7 @@
+@use "../../helpers/variables" as *;
+@use "./container";
+
+.project,
+.project-flipped {
+  margin-bottom: 5%;
+}

@@ -1,0 +1,108 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.about {
+  color: $dark-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_subheading {
+    margin: 2vh 0;
+    font-size: $about-text-font-size-sm;
+    font-weight: bold;
+
+    @include md {
+      font-size: $about-text-font-size-md;
+    }
+    @include lg {
+      font-size: $about-text-font-size-lg;
+    }
+    @include xl {
+      font-size: $about-text-font-size-xl;
+    }
+  }
+
+  &_text,
+  &_hobbies {
+    font-weight: normal;
+    &_container {
+      max-width: 80%;
+      padding: 10px;
+      font-size: $about-text-font-size-sm;
+      line-height: $about-text-line-height-sm;
+      border-radius: 10px;
+      background-color: $accent-color;
+      @include md {
+        font-size: $about-text-font-size-md;
+        line-height: $about-text-line-height-md;
+      }
+      @include lg {
+        font-size: $about-text-font-size-lg;
+        line-height: $about-text-line-height-lg;
+      }
+      @include xl {
+        font-size: $about-text-font-size-xl;
+        line-height: $about-text-line-height-xl;
+      }
+    }
+  }
+
+  &_hobbies_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hobbie_list {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+
+      @include md {
+        margin: 15px;
+      }
+      @include lg {
+        margin: 20px;
+      }
+      @include xl {
+        margin: 25px;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+
+        img {
+          height: $tech-stack-icon-height-sm;
+          @include md {
+            height: $tech-stack-icon-height-md;
+          }
+          @include lg {
+            height: $tech-stack-icon-height-lg;
+          }
+          @include xl {
+            height: $tech-stack-icon-height-xl;
+          }
+        }
+
+        @include md {
+          margin: 0 15px;
+        }
+        @include lg {
+          margin: 0 20px;
+        }
+        @include xl {
+          margin: 0 25px;
+        }
+      }
+    }
+  }
+}

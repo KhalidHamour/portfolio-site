@@ -1,0 +1,17 @@
+$contact-form-input-small-height: 2rem;
+$contact-form-input-large-height: 6rem;
+
+$contact-form-label-bottom-margin: 1.2rem;
+
+.contact_form {
+  &_input {
+    &-small {
+      margin-bottom: $contact-form-label-bottom-margin;
+      height: $contact-form-input-small-height;
+    }
+    &-large {
+      margin-bottom: $contact-form-label-bottom-margin;
+      height: $contact-form-input-large-height;
+    }
+  }
+}

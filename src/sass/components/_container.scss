@@ -1,0 +1,20 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.container {
+  margin-left: $content-margin-sm;
+  margin-right: $content-margin-sm;
+
+  @include md {
+    margin-left: $content-margin-md;
+    margin-right: $content-margin-md;
+  }
+  @include lg {
+    margin-left: $content-margin-lg;
+    margin-right: $content-margin-lg;
+  }
+  @include xl {
+    margin-left: $content-margin-xl;
+    margin-right: $content-margin-xl;
+  }
+}

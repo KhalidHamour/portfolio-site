@@ -1,0 +1,48 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.hero_container-right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 3%;
+
+  .hero_title {
+    font-weight: bolder;
+    font-size: $hero-title-font-size-sm;
+  }
+  .hero_text {
+    font-weight: normal;
+    margin-top: 2%;
+    font-size: $hero-text-font-size-sm;
+    width: 80%;
+    span {
+      color: $accent-color;
+    }
+  }
+
+  @include md {
+    .hero_title {
+      font-size: $hero-title-font-size-md;
+    }
+    .hero_text {
+      font-size: $hero-text-font-size-md;
+    }
+  }
+  @include lg {
+    .hero_title {
+      font-size: $hero-title-font-size-lg;
+    }
+    .hero_text {
+      font-size: $hero-text-font-size-lg;
+    }
+  }
+  @include xl {
+    .hero_title {
+      font-size: $hero-title-font-size-xl;
+    }
+    .hero_text {
+      font-size: $hero-text-font-size-xl;
+    }
+  }
+}

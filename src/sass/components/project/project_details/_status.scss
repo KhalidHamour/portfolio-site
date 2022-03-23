@@ -1,0 +1,21 @@
+@use "../../../helpers/variables" as *;
+@use "../../../helpers/mixins" as *;
+.project,
+.project-flipped {
+  &_status {
+    margin: 10px 0;
+    font-size: $project-status-font-size-sm;
+
+    @include md {
+      font-size: $project-status-font-size-md;
+    }
+
+    @include lg {
+      font-size: $project-status-font-size-lg;
+    }
+
+    @include xl {
+      font-size: $project-status-font-size-xl;
+    }
+  }
+}

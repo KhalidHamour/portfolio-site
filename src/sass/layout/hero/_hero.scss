@@ -1,0 +1,13 @@
+@use "../../helpers/variables" as *;
+@use "./img";
+@use "./text";
+@use "./icon";
+@use "./actions";
+@use "./container";
+@use "./scroll-thing";
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  color: $dark-text-color;
+}

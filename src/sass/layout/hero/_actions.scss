@@ -1,0 +1,43 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.hero_actions {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .hero_btn {
+    height: $hero-btn-height-sm;
+    width: auto;
+    position: relative;
+    align-self: center;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+
+  .hero_social-links {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @include md {
+    .hero_btn {
+      height: $hero-btn-height-md;
+    }
+  }
+  @include lg {
+    justify-content: center;
+    .hero_btn {
+      height: $hero-btn-height-lg;
+    }
+  }
+  @include xl {
+    .hero_btn {
+      height: $hero-btn-height-xl;
+    }
+  }
+}

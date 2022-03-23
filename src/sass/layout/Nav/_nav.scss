@@ -1,0 +1,55 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.nav {
+  display: flex;
+  background-color: $accent-color;
+  color: $light-text-color;
+  font-size: $nav-font-size-sm;
+  font-weight: bold;
+  position: sticky;
+  top: 0px;
+  z-index: 300;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    width: 100%;
+
+    .nav_links {
+      display: flex;
+      flex-direction: row;
+      li {
+        a {
+          color: $light-text-color;
+        }
+
+        margin: 0 $nav-links-margin-sm;
+
+        @include md {
+          margin: 0 $nav-links-margin-md;
+        }
+        @include lg {
+          margin: 0 $nav-links-margin-lg;
+        }
+        @include xl {
+          margin: 0 $nav-links-margin-xl;
+        }
+      }
+    }
+
+    @include md {
+      font-size: $nav-font-size-md;
+    }
+
+    @include lg {
+      font-size: $nav-font-size-lg;
+    }
+
+    @include xl {
+      font-size: $nav-font-size-xl;
+      padding: 15px 0;
+    }
+  }
+}

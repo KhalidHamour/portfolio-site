@@ -1,0 +1,125 @@
+@use "../../../helpers/variables" as *;
+@use "../../../helpers/mixins" as *;
+
+.project,
+.project-flipped {
+  &_builtwith-list {
+    display: flex;
+    flex-direction: row;
+    .icon {
+      height: $tech-stack-icon-height-sm;
+      margin: 0 $tech-stack-icon-spacing-sm;
+    }
+  }
+
+  &.fullstack {
+    .project_builtwith-list {
+      display: flex;
+      justify-content: space-around;
+      &-frontend {
+        display: flex;
+        .icon {
+          height: $tech-stack-icon-height-sm;
+          margin: 0 $tech-stack-icon-spacing-sm;
+        }
+      }
+      &-backend {
+        display: flex;
+        .icon {
+          height: $tech-stack-icon-height-sm;
+          margin: 0 $tech-stack-icon-spacing-sm;
+        }
+      }
+      &-lables {
+        display: flex;
+        justify-content: space-around;
+        font-size: $project-stack-label-font-size-sm;
+      }
+    }
+  }
+
+  @include md {
+    &_builtwith-list {
+      .icon {
+        height: $tech-stack-icon-height-md;
+        margin: 0 $tech-stack-icon-spacing-md;
+      }
+    }
+
+    &.fullstack {
+      .project_builtwith-list {
+        &-frontend {
+          .icon {
+            height: $tech-stack-icon-height-md;
+            margin: 0 $tech-stack-icon-spacing-md;
+          }
+        }
+        &-backend {
+          .icon {
+            height: $tech-stack-icon-height-md;
+            margin: 0 $tech-stack-icon-spacing-md;
+          }
+        }
+        &-lables {
+          font-size: $project-stack-label-font-size-md;
+        }
+      }
+    }
+  }
+  @include lg {
+    &_builtwith-list {
+      .icon {
+        height: $tech-stack-icon-height-lg;
+        margin: 0 $tech-stack-icon-spacing-lg;
+      }
+    }
+
+    &.fullstack {
+      .project_builtwith-list {
+        &-frontend {
+          .icon {
+            height: $tech-stack-icon-height-lg;
+            margin: 0 $tech-stack-icon-spacing-lg;
+          }
+        }
+        &-backend {
+          .icon {
+            height: $tech-stack-icon-height-lg;
+            margin: 0 $tech-stack-icon-spacing-lg;
+          }
+        }
+        &-lables {
+          font-size: $project-stack-label-font-size-lg;
+        }
+      }
+    }
+  }
+  @include xl {
+    &_builtwith-list {
+      .icon {
+        height: $tech-stack-icon-height-xl;
+        margin: 0 $tech-stack-icon-spacing-xl;
+      }
+    }
+
+    &.fullstack {
+      .project_builtwith-list {
+        &-frontend {
+          .icon {
+            height: $tech-stack-icon-height-xl;
+            margin: 0 $tech-stack-icon-spacing-xl;
+          }
+        }
+        &-backend {
+          .icon {
+            height: $tech-stack-icon-height-xl;
+            margin: 0 $tech-stack-icon-spacing-xl;
+          }
+        }
+        &-lables {
+          font-size: $project-stack-label-font-size-xl;
+        }
+      }
+    }
+  }
+}

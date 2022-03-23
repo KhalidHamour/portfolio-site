@@ -1,0 +1,14 @@
+@use "./helpers/variables" as *;
+@use "./base/reset";
+@use "./components";
+@use "./layout";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "poppins", sans-serif;
+  background-color: $background-color;
+}

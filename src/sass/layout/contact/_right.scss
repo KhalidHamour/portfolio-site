@@ -1,0 +1,29 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.contact {
+  &-right {
+    width: 100%;
+    @include lg {
+      width: 50%;
+    }
+  }
+  &_form {
+    display: flex;
+    flex-direction: column;
+
+    &_label {
+      font-size: $contact-form-label-font-size-sm;
+
+      @include md {
+        font-size: $contact-form-label-font-size-md;
+      }
+      @include lg {
+        font-size: $contact-form-label-font-size-lg;
+      }
+      @include xl {
+        font-size: $contact-form-label-font-size-xl;
+      }
+    }
+  }
+}

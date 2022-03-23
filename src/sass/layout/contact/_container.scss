@@ -1,0 +1,18 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.contact {
+  color: $dark-text-color;
+  height: min-content;
+  margin: 10vh 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    @include lg {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.hero_container-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero_img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .hero_img-background {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $image-background-color;
+      width: $img-size-sm + $image-background-padding-sm;
+      height: $img-size-sm + $image-background-padding-sm;
+      border-radius: 50%;
+
+      .hero_img {
+        height: $img-size-sm;
+        width: $img-size-sm;
+        border-radius: 50%;
+        z-index: 10;
+      }
+    }
+
+    .hero_img-decoration {
+      &.left {
+        position: absolute;
+        background-color: $image-background-color;
+        width: $img-size-sm + $image-background-padding-sm;
+        height: $img-size-sm + $image-background-padding-sm;
+        border-radius: 50%;
+        left: $image-background-offset-sm;
+      }
+
+      &.right {
+        position: absolute;
+        background-color: $image-background-color;
+        width: $img-size-sm + $image-background-padding-sm;
+        height: $img-size-sm + $image-background-padding-sm;
+        border-radius: 50%;
+        right: $image-background-offset-sm;
+      }
+    }
+
+    @include md {
+      .hero_img-background {
+        width: $img-size-md + $image-background-padding-md;
+        height: $img-size-md + $image-background-padding-md;
+
+        .hero_img {
+          height: $img-size-md;
+          width: $img-size-md;
+        }
+      }
+
+      .hero_img-decoration {
+        &.left {
+          width: $img-size-md + $image-background-padding-md;
+          height: $img-size-md + $image-background-padding-md;
+
+          left: $image-background-offset-md;
+        }
+
+        &.right {
+          width: $img-size-md + $image-background-padding-md;
+          height: $img-size-md + $image-background-padding-md;
+
+          right: $image-background-offset-md;
+        }
+      }
+    }
+
+    @include lg {
+      .hero_img-background {
+        width: $img-size-lg + $image-background-padding-lg;
+        height: $img-size-lg + $image-background-padding-lg;
+
+        .hero_img {
+          height: $img-size-lg;
+          width: $img-size-lg;
+        }
+      }
+
+      .hero_img-decoration {
+        &.left {
+          width: $img-size-lg + $image-background-padding-lg;
+          height: $img-size-lg + $image-background-padding-lg;
+
+          left: $image-background-offset-lg;
+        }
+
+        &.right {
+          width: $img-size-lg + $image-background-padding-lg;
+          height: $img-size-lg + $image-background-padding-lg;
+
+          right: $image-background-offset-lg;
+        }
+      }
+    }
+
+    @include xl {
+      .hero_img-background {
+        width: $img-size-xl + $image-background-padding-xl;
+        height: $img-size-xl + $image-background-padding-xl;
+
+        .hero_img {
+          height: $img-size-xl;
+          width: $img-size-xl;
+        }
+      }
+
+      .hero_img-decoration {
+        &.left {
+          width: $img-size-xl + $image-background-padding-xl;
+          height: $img-size-xl + $image-background-padding-xl;
+
+          left: $image-background-offset-xl;
+        }
+
+        &.right {
+          width: $img-size-xl + $image-background-padding-xl;
+          height: $img-size-xl + $image-background-padding-xl;
+
+          right: $image-background-offset-xl;
+        }
+      }
+    }
+  }
+}

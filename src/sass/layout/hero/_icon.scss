@@ -1,0 +1,20 @@
+@use "../../helpers/variables" as *;
+@use "../../helpers/mixins" as *;
+
+.hero_icon {
+  height: $hero-icon-height-sm;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+
+  @include md {
+    height: $hero-icon-height-md;
+  }
+  @include lg {
+    height: $hero-icon-height-lg;
+  }
+  @include xl {
+    height: $hero-icon-height-xl;
+  }
+}

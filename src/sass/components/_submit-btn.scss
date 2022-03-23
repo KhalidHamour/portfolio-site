@@ -1,0 +1,32 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+$submit-btn-height: 2.2rem;
+
+.contact_form {
+  &_submit {
+    width: min-content;
+    font-weight: bold;
+    border-radius: 30rem;
+    background-color: $accent-color;
+    font-size: $contact-btn-font-size-sm;
+    height: $contact-btn-height-sm;
+
+    &:hover {
+      background-color: darken($accent-color, 5);
+    }
+
+    @include md {
+      font-size: $contact-btn-font-size-md;
+      height: $contact-btn-height-md;
+    }
+    @include lg {
+      font-size: $contact-btn-font-size-lg;
+      height: $contact-btn-height-lg;
+    }
+    @include xl {
+      font-size: $contact-btn-font-size-xl;
+      height: $contact-btn-height-xl;
+    }
+  }
+}
